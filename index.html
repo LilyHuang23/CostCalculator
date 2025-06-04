@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <title>Project Cost Calculator</title>
+  
+</head>
+<body>
+  <h1>Project Cost Calculator</h1>
+  <!-- Project Controls -->
+<div style="margin-top: 30px;">
+  <input id="projectName" placeholder="Project name" />
+  
+
+
+  <div>
+    
+<input id="purchaseDate" type="date" placeholder="Purchase Date" />
+   <input id="itemName" placeholder="Item name" />
+<input id="itemQuantity" type="number" placeholder="Quantity used" />
+<input id="itemTotalCost" type="number" placeholder="Total cost of item" step="0.01" />
+<input id="itemWeight" type="number" placeholder="Total weight/amount" step="0.01" />
+<button onclick="addItem()">Add Item</button>
+  </div>
+
+  <table id="itemTable">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Item</th>
+        <th>Qty</th>
+        <th>Total Cost</th>
+        <th>Total Weight</th>
+        <th>Unit Cost</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <h3>Total Project Cost: $<span id="projectTotal">0.00</span></h3>
+  <button onclick="saveProject()">Save Project</button>
+
+</div>
+<!-- Project Cards -->
+<div id="projectCards" style="margin-top: 20px;"></div>
+  <button onclick="startNewProject()">Start New Project</button>
+
+  <script src="main.js"></script>
+</body>
+</html>

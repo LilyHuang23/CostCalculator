@@ -1,0 +1,59 @@
+body { 
+    font-family: Arial; 
+    margin-top: 60px;
+    text-align:center;
+    padding: 20px;
+    background-color: rgb(186, 161, 236); 
+}
+
+  h1 {
+    padding-bottom: 0.5rem;
+  }
+  
+  input[type=number] {
+    cursor: pointer;
+  }
+  
+  #projectName{
+    background-color: white;
+    font-size: 1.5rem;
+    border-radius: 5pt;
+  }
+  #purchaseDate{
+    background-color: white;
+    font-size: 1.5rem;
+    border-radius: 5pt;
+  }
+  
+  #itemName{
+    background-color: white;
+    font-size: 1.5rem;
+    border-radius: 5pt;
+  }
+  
+  #itemQuantity{
+    background-color: white;
+    font-size: 1.5rem;
+    border-radius: 5pt;
+  }
+  
+  #itemTotalCost{
+    background-color: white;
+    font-size: 1.5rem;
+    border-radius: 5pt;
+  }
+  
+  #itemWeight{
+    background-color: white;
+    font-size: 1.5rem;
+    border-radius: 5pt;
+  }
+  
+  button{
+    background-color: white;
+    font-size: 1.5rem;
+    border-radius: 5pt;
+  }
+  
+  table { width: 100%; margin-top: 20px; border-collapse: collapse; }
+ th, td { border: 1px solid #ddd; padding: 8px; }
