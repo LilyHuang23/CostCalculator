@@ -128,9 +128,10 @@ function renderProjectCards() {
       <p><strong>Items:</strong> ${project.items.length}</p>
       <p><strong>Total Cost:</strong> $${total}</p>
       <button onclick="loadProject(${index})">Load</button>
-    <button onclick="deleteProject(${index})" style="margin-left: 10px; color: red;">Delete</button>
-
+      <button onclick="deleteProject(${index})" style="margin-left: 10px; color: red;">Delete</button>
+      <button onclick="duplicateProject(${index})" style="margin-left: 10px;">Duplicate</button>
     `;
+
 
     container.appendChild(card);
   });
@@ -177,5 +178,25 @@ function loadProject(index) {
       renderProjectCards();
     }
   }
+// duplicate function
+  
+function duplicateProject(index) {
+  const original = projects[index];
+  const newName = prompt("Enter name for duplicated project:", original.name + " (Copy)");
+
+  if (!newName) return;
+
+  const duplicatedProject = {
+    name: newName,
+    items: JSON.parse(JSON.stringify(original.items)) // deep copy
+  };
+
+  projects.push(duplicatedProject);
+  saveProjectsToStorage();
+  renderProjectCards();
+}
+
+
+
 // On first page load
 loadProjectsFromStorage();

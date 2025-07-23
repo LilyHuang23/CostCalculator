@@ -12,12 +12,14 @@ body {
   
   input[type=number] {
     cursor: pointer;
+    margin: 5pt;
   }
   
   #projectName{
     background-color: white;
     font-size: 1.5rem;
     border-radius: 5pt;
+    margin: 5pt;
   }
   #purchaseDate{
     background-color: white;
